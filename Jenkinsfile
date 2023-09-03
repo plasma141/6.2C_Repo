@@ -82,7 +82,7 @@ pipeline {
         
         stage('Email Notifications'){
             steps{
-            mail bcc: '', body: 'Jenkins Email Alerts ', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'mohitaulakh19@gmail.com.com'
+            mail bcc: '', body: 'Jenkins Email Alerts ', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'mohitaulakh19@gmail.com'
             }
         }
     }
