@@ -82,7 +82,7 @@ pipeline {
         
         stage('Email Notifications'){
             steps{
-            emailext attachLog: true, body: 'SUCCESSFUL BUILD', subject: 'End of test and security scan stages', to: 'mohitaulakkh19@gmail.com'
+            emailext (attachLog: true, body: 'SUCCESSFUL BUILD', subject: 'End of test and security scan stages', to: 'mohitaulakkh19@gmail.com')
             }
         }
     }
