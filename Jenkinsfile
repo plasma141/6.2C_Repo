@@ -58,6 +58,12 @@ pipeline {
                   // Using OWASP ZAP for security scan
             }
         }
+
+        stage('Email Notifications'){
+            steps{
+            emailext (attachLog: true, body: 'SUCCESSFUL BUILD', subject: 'End of test and security scan stages', to: 'mohitaulakh19@gmail.com')
+            }
+        }
         
         stage('Deploy to Staging') {
             steps {
@@ -80,11 +86,7 @@ pipeline {
             }
         }
         
-        stage('Email Notifications'){
-            steps{
-            emailext (attachLog: true, body: 'SUCCESSFUL BUILD', subject: 'End of test and security scan stages', to: 'mohitaulakkh19@gmail.com')
-            }
-        }
+        
     }
     
   
