@@ -4,7 +4,7 @@ pipeline {
     environment {
         DIRECTORY_PATH = "/path/to/code"
         TESTING_ENVIRONMENT = "testing-environment"
-        PRODUCTION_ENVIRONMENT = "Mohitpreet Singh"
+        PRODUCTION_ENVIRONMENT = "Mohitpreet Singh" 
     }
     tools {
         maven 'Maven' 
